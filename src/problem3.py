@@ -173,7 +173,7 @@ class Cloud(object):
         # ---------------------------------------------------------------------
         # TODO: 4. Implement and test this method.
         # ---------------------------------------------------------------------
-        
+
         return self.water
 
     def merge_cloud(self, another_cloud):
