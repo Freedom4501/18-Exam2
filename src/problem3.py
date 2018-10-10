@@ -82,7 +82,7 @@ class Cloud(object):
         self.water = water
         if self.water > self.capacity:
             self.water = self.capacity
-
+        self.rainamount = 0
 
 
 
@@ -129,14 +129,16 @@ class Cloud(object):
           :rtype: int | float
         """
         # ---------------------------------------------------------------------
-        # TODO: 3. Implement and test this method.
+        # Done: 3. Implement and test this method.
         # ---------------------------------------------------------------------
         if rain_amount > self.water:
             rain_amount = self.water
             self.water = 0
+            self.rainamount = self.rainamount + rain_amount
             return rain_amount
         elif rain_amount <= self.water:
             self.water = self.water - rain_amount
+        self.rainamount = self.rainamount + rain_amount
         return rain_amount
 
 
@@ -174,7 +176,7 @@ class Cloud(object):
         # TODO: 4. Implement and test this method.
         # ---------------------------------------------------------------------
 
-        return self.water
+        return self.rainamount
 
     def merge_cloud(self, another_cloud):
         """
