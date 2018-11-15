@@ -800,11 +800,11 @@ def problem1d(strings):
     # TODO: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
     for k in range(len(strings)):
         if is_prime(len(strings[k])):
             return strings[k]
-        elif is_prime(len(strings[k])) == '':
-            return -1
+    return -1
 
 
 
